@@ -1,0 +1,130 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(90deg, #0066cc, #3399ff);
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+  color: #ffeb3b;
+  transform: scale(1.1);
+}
+
+/* ===== Main Content ===== */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0066cc;
+}
+
+/* Services List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+ul li {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid #0066cc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #0066cc;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ===== Scroll Animations ===== */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Buttons ===== */
+button, .btn {
+  background: #0066cc;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover, .btn:hover {
+  background: #3399ff;
+  transform: scale(1.05);
+}
+
+/* ===== Responsive ===== */
+@media(max-width:600px){
+  header h1 { font-size: 2rem; }
+  header p { font-size: 1rem; }
+  ul { grid-template-columns: 1fr; }
+}
